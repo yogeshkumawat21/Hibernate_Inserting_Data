@@ -14,15 +14,7 @@
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
-        <!-- JDBC connection pool settings -->
-        <property name="hibernate.c3p0.min_size">5</property>
-        <property name="hibernate.c3p0.max_size">20</property>
-        <property name="hibernate.c3p0.timeout">300</property>
-        <property name="hibernate.c3p0.max_statements">50</property>
-        <property name="hibernate.c3p0.idle_test_period">3000</property>
-
-        <!-- Enable Hibernate's automatic session context management -->
-        <property name="hibernate.current_session_context_class">thread</property>
+    
 
         <!-- Echo all executed SQL to stdout -->
         <property name="hibernate.show_sql">true</property>
@@ -32,11 +24,15 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hibernate.hbm2ddl.auto">create</property>
 
-        <!-- Naming strategy -->
-        <property name="hibernate.implicit_naming_strategy">org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl</property>
-        <property name="hibernate.physical_naming_strategy">org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl</property>
-
+     
         <!-- Mapping files -->
         <mapping class="com.thirdhibernate.third.Student"/>
+        
+        <!-- mapping to make table in hibernate -->
+        
+         <mapping class="com.thirdhibernate.third.Adress"/>
+         <mapping class="com.thirdhibernate.third.Employee"/>
+        
+        
     </session-factory>
 </hibernate-configuration>
